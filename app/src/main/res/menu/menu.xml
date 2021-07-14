@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+
+        <item
+            android:icon="@drawable/ic_baseline_group_24"
+            android:title="New Group" />
+        <item
+            android:icon="@drawable/ic_baseline_lock_24"
+            android:title="New Secret Chat" />
+        <item
+            android:icon="@drawable/ic_baseline_chat_bubble_24"
+            android:title="New Channel" />
+    </group>
+
+
+<group>
+            <item tools:ignore="MenuTitle">
+                <menu>
+
+        <item android:id="@+id/settings" android:title="Settings" />
+        <item android:title="Profile" />
+        <item
+            android:id="@+id/logOut"
+            android:title="Log Out" />
+                </menu>
+            </item>
+</group>
+
+
+
+
+
+
+
+</menu>
