@@ -1,18 +1,23 @@
 package com.example.colibri.auth;
 
+import androidx.annotation.ColorInt;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.RotateDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.amulyakhare.textdrawable.util.ColorGenerator;
 import com.example.colibri.MainActivity;
 import com.example.colibri.R;
 import com.example.colibri.model.UserDetailModel;
+
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -52,6 +57,9 @@ public class UserDetails extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 snapshot.getRef().child("name").setValue(inputName.getText().toString());
+                ColorGenerator generator = ColorGenerator.MATERIAL;
+                String a = String.valueOf(generator.getRandomColor());
+                snapshot.getRef().child("avatar_color").setValue(a);
                 snapshot.getRef().child("UserName").setValue(inputUserName.getText().toString());
             }
 

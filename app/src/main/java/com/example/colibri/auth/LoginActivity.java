@@ -297,6 +297,7 @@ public class LoginActivity extends AppCompatActivity {
                         startActivity(intent);
                         finish();
                     } else {
+                        Toast.makeText(LoginActivity.this, "shu yerda xato", Toast.LENGTH_SHORT).show();
                        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                         intent.putExtra("id",phoneId);
                         startActivity(intent);

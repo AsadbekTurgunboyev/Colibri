@@ -3,6 +3,10 @@ package com.example.colibri.model;
 public class UserDetailModel {
     String Name,userName;
     String pic;
+    String phone;
+    String avatar_color;
+
+
 
     public UserDetailModel(String name, String userName, String pic) {
         Name = name;
@@ -33,5 +37,19 @@ public class UserDetailModel {
 
     public void setPic(String pic) {
         this.pic = pic;
+    }
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+    public String getAvatar_color() {
+        return avatar_color;
+    }
+
+    public void setAvatar_color(String avatar_color) {
+        this.avatar_color = avatar_color;
     }
 }

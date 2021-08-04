@@ -16,6 +16,7 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.example.colibri.auth.LoginActivity;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     ImageButton btnMenu;
+    FloatingActionButton fbn;
     FirebaseAuth mAuth;
 
     @Override
@@ -31,6 +33,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setContentView(R.layout.activity_main);
         initViews();
         mAuth = FirebaseAuth.getInstance();
+
         navigationView.bringToFront();
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawerLayout,R.string.open,R.string.close);
         drawerLayout.addDrawerListener(toggle);
@@ -42,6 +45,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
         });
         navigationView.setNavigationItemSelectedListener(this);
+        fbn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+            Intent intent = new Intent(MainActivity.this, ShowUsersActivity.class);
+            intent.putExtra("auth",mAuth.getCurrentUser().getPhoneNumber());
+            startActivity(intent);
+            }
+        });
 
     }
 
@@ -49,6 +60,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawerLayout = findViewById(R.id.drawer);
         navigationView = findViewById(R.id.navigation);
         btnMenu = findViewById(R.id.btnMenu);
+        fbn = findViewById(R.id.fbn);
     }
 
     @Override
