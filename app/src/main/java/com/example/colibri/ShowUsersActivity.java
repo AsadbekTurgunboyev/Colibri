@@ -62,6 +62,7 @@ public class ShowUsersActivity extends AppCompatActivity {
                     }
                 }
                 ShowUserAdapter adapter = new ShowUserAdapter(arrayList,ShowUsersActivity.this);
+
                 recyclerView.setAdapter(adapter);
             }
 

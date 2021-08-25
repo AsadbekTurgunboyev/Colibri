@@ -1,5 +1,6 @@
 package com.example.colibri.adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.ColorStateList;
@@ -44,7 +45,7 @@ public class ShowUserAdapter extends RecyclerView.Adapter<ShowUserAdapter.Viewho
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ShowUserAdapter.Viewholder holder, int position) {
+    public void onBindViewHolder(Viewholder holder, @SuppressLint("RecyclerView") int position) {
         String nameLetter = mList.get(position).getName();
         holder.user_name.setText(nameLetter);
         int color = Integer.parseInt(mList.get(position).getAvatar_color());

@@ -49,7 +49,7 @@
     <item android:right="10dp">
         <shape android:shape="rectangle">
             <solid android:color="#0088CC" />
-            <corners android:bottomRightRadius="0dp" android:topRightRadius="0dp" android:radius="100dp" />
+            <corners android:bottomRightRadius="0dp"  android:radius="100dp" />
         </shape>
     </item>
 

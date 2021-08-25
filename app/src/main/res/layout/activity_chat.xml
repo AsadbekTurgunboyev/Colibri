@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   android:id="@+id/root_view"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -88,8 +89,10 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chatRec"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -106,14 +109,17 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <ImageView
+            android:id="@+id/emoji"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_baseline_tag_faces_24"
             android:layout_gravity="center"
+
             android:layout_marginLeft="10dp"/>
         <EditText
             android:id="@+id/writingTxtChat"
             android:layout_width="0dp"
+            app:emojiSize="30sp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@null"
@@ -123,6 +129,23 @@
             android:textSize="18sp" />
 
         <ImageView
+            android:id="@+id/file_ic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:rotation="-30"
+            android:rotationY="180"
+            android:src="@drawable/ic_baseline_attach_file_24"
+            android:layout_marginRight="5dp"/>
+        <ImageView
+            android:id="@+id/voice_ic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_baseline_keyboard_voice_24"
+            android:layout_marginRight="10dp"/>
+
+        <ImageView
             android:id="@+id/sendImageChat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -130,6 +153,7 @@
             android:clickable="true"
             android:background="?actionBarItemBackground"
             android:focusable="true"
+            android:visibility="gone"
             android:layout_marginRight="5dp"
             android:src="@drawable/ic_baseline_send_24" />
     </LinearLayout>

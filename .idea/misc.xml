@@ -5,13 +5,19 @@
       <map>
         <entry key="app/src/main/res/drawable/avatar_bg.xml" value="0.36666666666666664" />
         <entry key="app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.3138888888888889" />
+        <entry key="app/src/main/res/drawable/ic_baseline_attach_file_24.xml" value="0.3723958333333333" />
         <entry key="app/src/main/res/drawable/ic_baseline_chat_bubble_24.xml" value="0.3138888888888889" />
+        <entry key="app/src/main/res/drawable/ic_baseline_check_24.xml" value="0.36666666666666664" />
+        <entry key="app/src/main/res/drawable/ic_baseline_keyboard_voice_24.xml" value="0.36666666666666664" />
         <entry key="app/src/main/res/drawable/ic_baseline_send_24.xml" value="0.3723958333333333" />
         <entry key="app/src/main/res/drawable/ic_baseline_tag_faces_24.xml" value="0.36666666666666664" />
         <entry key="app/src/main/res/drawable/left_message.xml" value="0.36666666666666664" />
         <entry key="app/src/main/res/drawable/right_message.xml" value="0.36666666666666664" />
-        <entry key="app/src/main/res/layout/activity_chat.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/activity_chat.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_show_users.xml" value="0.33055555555555555" />
+        <entry key="app/src/main/res/layout/left_layout.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/right_layout.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/rootviews.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/show_item.xml" value="0.33055555555555555" />
       </map>
     </option>
